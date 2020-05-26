@@ -1,0 +1,57 @@
+using System;
+
+
+namespace DoubleNumbers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            numberLoop();
+            displayArrays(copy, doubleUserNums);
+        }
+
+        static void numberLoop()
+        {
+            bool loop = true;
+            Console.WriteLine("Enter Numbers to be copied and doubled, 0 to quit.");
+            while (loop)
+            {
+                
+                int numReader = Convert.ToInt32(Console.ReadLine());
+
+                int[] userNums = new int[numReader];
+
+                if (numReader == 0)
+                {
+                    loop = false;
+                }
+            }
+
+           
+            
+
+
+            
+        }
+
+        static int[] copyAndDouble(int[] userNums)
+        {
+            int length = userNums.Length;
+            int[] copy = new int[length];
+            int[] doubledCopy = new int[length];
+            for (int i = 0; i < length; i++) {
+                doubledCopy[i] = userNums[i] * 2;
+            }
+
+            return doubledCopy;
+
+            
+        }
+
+        static void displayArrays(int[]copy, int[]doubleUserNums)
+        {
+            Console.WriteLine(Convert.ToString(copy), Convert.ToString(doubleUserNums));
+        }
+    }
+}
